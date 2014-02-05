@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
   s.author         = { "Felipe Saint-Jean" => "fsaint@gmail.com" }
   s.platform       = :ios, '6.0'
   s.source         = { :git => "https://github.com/fsaint/FSUpateMe.git" }
-  s.source_files   = 'Classes/**/*.{h,m}'
+  s.source_files   = 'FSUpdateMe/Classes/**/*.{h,m}'
   s.requires_arc   = true
   s.dependency 'AFNetworking'
 end

@@ -29,10 +29,10 @@ static FSUpdateMe *sharedInstance = nil;
 }
 +(BOOL)needsUpdateFrom:(NSString *)current_version to:(NSString *)update_version{
     
-    if ([current_version isEqualToString:update_version])
-        return NO;
     
-    return YES;
+    // Gonna try to do an smarter update
+    return ([current_version compare:update_version] == NSOrderedAscending);
+   
 }
 -(void)updateMeEnterprise:(NSString *)string_url updateURL:(NSString *)update;
 {

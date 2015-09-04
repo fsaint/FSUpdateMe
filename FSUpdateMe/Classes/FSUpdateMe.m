@@ -58,7 +58,7 @@ static FSUpdateMe *sharedInstance = nil;
     
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
         
-        if ([FSUpdateMe needsUpdateFrom:[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"] to:responseObject[@"items"][0][@"metadata"][@"bundle-version"]]){
+        if ([FSUpdateMe needsUpdateFrom:[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"] to:responseObject[@"items"][0][@"metadata"][@"bundle-version"]]){
             
             
             
